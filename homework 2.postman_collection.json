@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "299b2de0-4148-4b86-919a-f644cd9cec8f",
+		"name": "homework 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "projects",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "projects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"name\": \"new project\",\r\n        \"description\": \"this is a description\",\r\n        \"assosciate_repository_url\": \"www.github.com/elevatorproject\",\r\n        \"tasks_id\": [\r\n            \"6361d4325a82917477373dda\",\r\n            \"6361d4325a82917477373ddc\"\r\n        ],\r\n        \"users_id\": [\r\n            \"6361d4335a82917477373de7\",\r\n            \"6361d4345a82917477373de9\"\r\n        ],\r\n        \r\n        \"manager\": \"6361d4335a82917477373de7\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "projects/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8880/projects/636efdf5e3c5f8d126e713d9",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"projects",
+						"636efdf5e3c5f8d126e713d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "projects/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"put\",\r\n    \"description\": \"This project is based on designing a software for elevator\",\r\n    \"assosciate_repository_url\": \"www.github.com/elevatorproject\",\r\n    \"tasks_id\": [\r\n        \"6361d4325a82917477373dda\",\r\n        \"6361d4325a82917477373ddc\"\r\n    ],\r\n    \"users_id\": [\r\n        \"6361d4335a82917477373de7\",\r\n        \"6361d4345a82917477373de9\"\r\n    ],\r\n    \"__v\": 0,\r\n    \"manager\": \"6361d4335a82917477373de7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/projects/636efdf5e3c5f8d126e713d9",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"projects",
+						"636efdf5e3c5f8d126e713d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"first_name\": \"abhi\",\r\n    \"last_name\": \"shekar\",\r\n    \"position\": \"assistant manager\",\r\n    \"status\": true,\r\n    \"project\": \"636efdf5e3c5f8d126e713d9\",\r\n    \"__v\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/users/6361d4335a82917477373de7",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"users",
+						"6361d4335a82917477373de7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8880/users/6361d4335a82917477373de7",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"users",
+						"6361d4335a82917477373de7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/tasks/636f2a62ba5d4081287d9826",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"tasks",
+						"636f2a62ba5d4081287d9826"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timeline\": {\r\n        \"date_assigned\": \"2022-09-21T07:00:00.000Z\",\r\n        \"date_due\": \"2022-09-22T07:00:00.000Z\",\r\n        \"date_updated\": \"2022-09-25T07:00:00.000Z\"\r\n    },\r\n\r\n    \"name\": \"web development\",\r\n    \"details\": \"web dev of a software\",\r\n    \"priority\": \"high\",\r\n    \"status\": \"assigned\",\r\n    \"project\": \"636efdf5e3c5f8d126e713d9\",\r\n    \"user\": \"6361d4335a82917477373de7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/tasks/636f2a62ba5d4081287d982a",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"tasks",
+						"636f2a62ba5d4081287d982a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timeline\": {\r\n        \"date_assigned\": \"2022-09-21T07:00:00.000Z\",\r\n        \"date_due\": \"2022-09-22T07:00:00.000Z\",\r\n        \"date_updated\": \"2022-09-25T07:00:00.000Z\"\r\n    },\r\n\r\n    \"name\": \"web development\",\r\n    \"details\": \"web dev of a software\",\r\n    \"priority\": \"high\",\r\n    \"status\": \"completed\",\r\n    \"project\": \"636efdf5e3c5f8d126e713d9\",\r\n    \"user\": \"6361d4335a82917477373de7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8880/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8880/tasks/636f2a62ba5d4081287d9826",
+					"host": [
+						"localhost"
+					],
+					"port": "8880",
+					"path": [
+						"tasks",
+						"636f2a62ba5d4081287d9826"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
